@@ -42,12 +42,12 @@ GestureNet/
 ### On a development PC
 
 ```bash
-python hand_tracker.py        # Sanity check the camera and MediaPipe
-python data_collection.py     # Collect 200 samples per gesture
-python augmented_data.py      # Mirror to 400 per gesture (RUN ONCE ONLY)
-python model_training.py      # Train, evaluate, save .pkl files
-python TfLite.py              # Convert to INT8 TensorFlow Lite
-python live_demo.py           # Real-time test on the PC
+hand_tracker.py        # Sanity check the camera and MediaPipe
+data_collection.py     # Collect 200 samples per gesture
+augmented_data.py      # Mirror to 400 per gesture (RUN ONCE ONLY)
+model_training.py      # Train, evaluate, save .pkl files
+TfLite.py              # Convert to INT8 TensorFlow Lite
+live_demo.py           # Real-time test on the PC
 ```
 
 **Note on `augmented_data.py`:** it overwrites `gesture_data.csv` in place. Run it exactly once on a freshly collected dataset. The CSV committed to this repository is already augmented.
